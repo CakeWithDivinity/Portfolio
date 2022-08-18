@@ -1,6 +1,6 @@
 baseURL: "https://cakewithdivinity.github.io/"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Hendrik Loewe | Webdeveloper"
 theme: hugo-profile
 
 Paginate: 3
@@ -14,39 +14,13 @@ Menus:
   main:
     - identifier: blog
       name: Blog
-      title: Blog posts
+      title: View my Blog posts
       url: /blogs
       weight: 1
-    
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
-      weight: 2
-
-    #Dropdown menu
-    # - identifier: dropdown
-    #   title: Example dropdown menu
-    #   name: Dropdown
-    #   weight: 3
-    # - identifier: dropdown1
-    #   title: example dropdown 1
-    #   name: example 1
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 1
-    # - identifier: dropdown2
-    #   title: example dropdown 2
-    #   name: example 2
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 2
 
 params:
-  title: "Hugo Profile"
-  description: Text about my cool site
-  # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  title: "Hendrik Loewe"
+  description: My personal Portfolio and Blog
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -54,7 +28,7 @@ params:
   useBootstrapCDN: false
 
   theme:
-    disableThemeToggle: false
+    disableThemeToggle: true
     # defaultTheme: "light" # dark
 
   # font:
@@ -64,21 +38,14 @@ params:
   #   textAlign: right # default: left
 
   # color preference
-  # color:
-  #   textColor:
-  #   secondaryTextColor:
-  #   backgroundColor:
-  #   secondaryBackgroundColor:
-  #   primaryColor:
-  #   secondaryColor:
+  color:
 
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
+    darkmode:
+      textColor: "#a3abd0"
+      secondaryTextColor: "#a3abd0"
+      backgroundColor: "#1a1b26"
+      primaryColor: "#6280c3"
+      secondaryColor: "#24283b"
 
   # If you want to customize the menu, you can change it here
   # navbar:
@@ -98,141 +65,104 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Isabella."
-    subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-    image: /images/hero.svg
-    button:
-      enable: true
-      name: "Resume"
-      url: "#"
+    title: "Hendrik Loewe."
+    subtitle: "And I make Computers go Beep-Boop"
+    content: "I am a young Web-Developer based in Wuppertal, Germany. I strive for correctness, clean code and performance."
+    image: /images/portrait.jpg
+    # button:
+    #   enable: true
+    #   name: "Resume"
+    #   url: "/Resume-Hendrik-Loewe.pdf"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
-        - icon: fab fa-twitter
-          url: https://example.com
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+          url: https://github.com/CakeWithDivinity
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/hendrik-loewe-04ba2b202/
+        - icon: fas fa-envelope
+          url: mailto:hendrikloewe3@gmail.com
 
   # About
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/me.jpg"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      I am a Web-developer primarily working with Angular and Symfony. Right now I am studying Computer Science at the FOM-Hochschule in Düsseldorf.
+      I enjoy reactive programming with RxJS and NGRX and am trying to do Test-Driven-Development as far as I can.
+      At work I develop highly complex configurators for our customers, which let users configure products to their individual needs.
+      In my freetime I like to learn more about coding and try to improve myself towards writing clean, correct and performant code.
     skills:
       enable: true
-      title: "Here are a few technologies I've been working with recently:"
+      title: "Here are a few technologies I've worked with before:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
-
+        - "Angular"
+        - "RxJS"
+        - "NgRX"
+        - "Karma"
+        - "Cypress"
+        - "Symfony"
+        - "ApiPlatform"
+        - "Git"
+        
   # Experience
   experience:
     enable: true
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
-        featuredLink:
-          enable: true
-          name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        info:
-          enable: true
-          content: I worked as a software developer for more than one year in Amazon.
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
-        info:
-          enable: false
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+      - job: "Software Engineering Trainee"
+        company: "Web-Fabric GmbH Trainee"
+        companyUrl: "https://www.web-fabric.de/"
+        date: "Aug 2021 - present"
+        content: |- 
+          I am currently working as a software engineering trainee at [Web-Fabric GmbH](https://www.web-fabric.de/) in Wuppertal for 3 days a week, while I visit a University the rest of the week.
+          At work, we develop complex configurators, shops and other customized solutions for our customers. In my first year I almost only
+          worked in the frontend, implementing business logic for configurators in Angular using RxJS and NGRX. Then I did more and more stuff on the backend
+          so that I could handle tasks more easily on my own as a Fullstack engineer.
+          Personally, I want our customers to get the best product shipped, so I read a lot of Blog posts and books in my freetime and try
+          to apply the newly gained knowledge in our new projects and by refactoring old ones.
+      - job: "Software Engineering Intern"
+        company: "Web-Fabric GmbH Intern"
+        companyUrl: "https://www.web-fabric.de/"
+        date: "Oct 2019 - Aug 2021"
+        content: | 
+          After a 2 week long internship, which he had to do in order to get our degree, I got a job offer from [Web-Fabric GmbH](https://www.web-fabric.de/).
+          I convinced them of the knowledge in program, which I gained by doing software-engineering as a hobby since I was ten.
+          In the first year I had a mentor on my side, supervising my rewrite of a Product in ASP.NET Core.
+          While in the second year, I got to develop implementations of an internal framework as sample-applications, so other developers on our team
+          could understand and use the library more easily. 
 
   # Education
   education:
     enable: true
     # index: true
     items:
-      - title: "Master of Business Administration"
-        school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
-        content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
       - title: "Bachelor of Science in Computer Science"
         school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
+          name: "FOM University of Applied Sciences for Economics and Management"
+          url: "https://www.fom.de/"
+        date: "Sep 2021 - Mar 2025"
+        GPA: "AVG until now: 1.2 out of 5 (1-5 lower is better)"
         content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
-      - title: "High School"
+          - Scientific Papers:
+            - Image Processing and Facial Recognition using Artificial Intelligence
+            - Product-Specification-Sheet for the implementation of a Smart-Mirror
+      - title: "University Entrance Diploma"
         school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
+          name: "Carl-Fuhlrott-Gymnasium, Wuppertal"
+          url: "http://cfg.wtal.de/"
+        date: "Aug 2013 - Aug 2021"
+        GPA: "832 out of 900"
+        content: |-
+          - A-Level Subjects:
+            - Mathematics (Intensive Course)
+            - Geography (Intensive Course)
+            - Computer Science (Oral Basic Course)
+            - English (Written Basic Course)
+          - In 10th grade I worked on a scientific paper on how to secure a modern Web-Application
+          - From 10th to 12th grade I regularly took part in an Astronomy course, where we worked with highly professional equipment to observe stars, nebulas and learn about our galaxy at the [Schülerlabor Astronomie](https://www.schuelerlabor-astronomie.de/)
+          - I discovered a highly severe security vulnerability in our schools online system, revealing the passwords of students
+          - I developed a Web-Application for a school project about the European Union
+          - I volunteered as a event-technician for our school events, setting up Cameras, Lights and Audio for i.e. the Symphony-Orchestra Wuppertal
 
   # Achievements
   achievements:
