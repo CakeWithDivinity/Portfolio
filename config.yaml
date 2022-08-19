@@ -22,22 +22,11 @@ params:
   title: "Hendrik Loewe"
   description: My personal Portfolio and Blog
 
-  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
-  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
-  # Note the lack of "" in true, it should be of boolean type.
   useBootstrapCDN: false
 
   theme:
     disableThemeToggle: true
-    # defaultTheme: "light" # dark
 
-  # font:
-  #   fontSize: 1.5rem # default: 1rem
-  #   fontWeight: 500 # default: 400
-  #   lineHeight: 1 # default: 1.5
-  #   textAlign: right # default: left
-
-  # color preference
   color:
 
     darkmode:
@@ -47,20 +36,6 @@ params:
       primaryColor: "#6280c3"
       secondaryColor: "#24283b"
 
-  # If you want to customize the menu, you can change it here
-  # navbar:
-  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-  #   brandName: "Profile" # Brand name for the brand | default is the title variable
-
-  #   menus:
-  #     disableAbout: true
-  #     disableExperience: true
-  #     disableEducation: true
-  #     disableProjects: true
-  #     disableAchievements: true
-  #     disableContact: true
-
   # Hero
   hero:
     enable: true
@@ -69,10 +44,6 @@ params:
     subtitle: "And I make Computers go Beep-Boop"
     content: "I am a young Web-Developer based in Wuppertal, Germany. I strive for correctness, clean code and performance."
     image: /images/portrait.jpg
-    # button:
-    #   enable: true
-    #   name: "Resume"
-    #   url: "/Resume-Hendrik-Loewe.pdf"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -162,87 +133,18 @@ params:
           - From 10th to 12th grade I regularly took part in an Astronomy course, where we worked with highly professional equipment to observe stars, nebulas and learn about our galaxy at the [Schülerlabor Astronomie](https://www.schuelerlabor-astronomie.de/)
           - I discovered a highly severe security vulnerability in our schools online system, revealing the passwords of students
           - I developed a Web-Application for a school project about the European Union
-          - I volunteered as a event-technician for our school events, setting up Cameras, Lights and Audio for i.e. the Symphony-Orchestra Wuppertal
-
-  # Achievements
-  achievements:
-    enable: true
-    items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
-        url: https://example.com
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
-
-  # projects
-  projects:
-    enable: true
-    items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
-        featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
-        links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
-
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
-        featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
-        # badges:
-        #   - "Django"
-        #   - "Bootstrap"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
-
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+          - I volunteered as an event-technician for our school events, setting up Cameras, Lights and Audio for i.e. the Symphony-Orchestra Wuppertal
 
   #Contact
   contact:
     enable: true
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
+    content: Feel free to shoot me a message via one of my socials or by mailing me
+    email: hendrikloewe3@gmail.com
     btnName: Mail me
 
   footer:
-    # recentPosts: false
+    enable: false
+    recentPosts: true
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+      github: https://github.com/CakeWithDivinity
+      linkedin: https://www.linkedin.com/in/hendrik-loewe-04ba2b202/
