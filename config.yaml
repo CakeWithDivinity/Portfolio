@@ -57,7 +57,6 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.jpg"
     content: |-
       I am a Web-developer primarily working with Angular and Symfony. Right now I am studying Computer Science at the FOM-Hochschule in Düsseldorf.
       I enjoy reactive programming with RxJS and NGRX and am trying to do Test-Driven-Development as far as I can.
