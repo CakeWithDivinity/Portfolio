@@ -41,8 +41,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Hendrik Loewe."
-    subtitle: "And I make Computers go Beep-Boop"
-    content: "I am a young Web-Developer based in Wuppertal, Germany. I strive for correctness, clean code and performance."
+    subtitle: "And I Make Computers Go Beep-Boop"
+    content: "I am a young web-developer based in Wuppertal, Germany. I strive for correctness, clean code and performance."
     image: /images/portrait.jpg
     socialLinks:
       fontAwesomeIcons:
@@ -58,9 +58,9 @@ params:
     enable: true
     title: "About Me"
     content: |-
-      I am a Web-developer primarily working with Angular and Symfony. Right now I am studying Computer Science at the FOM-Hochschule in Düsseldorf.
-      I enjoy reactive programming with RxJS and NGRX and am trying to do Test-Driven-Development as far as I can.
-      At work I develop highly complex configurators for our customers, which let users configure products to their individual needs.
+      I am a web-developer primarily working with Angular and Symfony. Right now I am studying computer-science at the FOM-Hochschule in Düsseldorf.
+      I enjoy reactive programming with RxJS and NgRX and am trying to do test-driven-development as far as I can.
+      At work, I develop highly complex configurators for our customers, which let users configure products to their individual needs.
       In my freetime I like to learn more about coding and try to improve myself towards writing clean, correct and performant code.
     skills:
       enable: true
@@ -84,21 +84,21 @@ params:
         companyUrl: "https://www.web-fabric.de/"
         date: "Aug 2021 - present"
         content: |- 
-          I am currently working as a software engineering trainee at [Web-Fabric GmbH](https://www.web-fabric.de/) in Wuppertal for 3 days a week, while I visit a University the rest of the week.
-          At work, we develop complex configurators, shops and other customized solutions for our customers. In my first year I almost only
-          worked in the frontend, implementing business logic for configurators in Angular using RxJS and NGRX. Then I did more and more stuff on the backend
-          so that I could handle tasks more easily on my own as a Fullstack engineer.
-          Personally, I want our customers to get the best product shipped, so I read a lot of Blog posts and books in my freetime and try
-          to apply the newly gained knowledge in our new projects and by refactoring old ones.
+          I am currently working as a software engineering trainee at [Web-Fabric GmbH](https://www.web-fabric.de/) in Wuppertal for 3 days a week, while I visit a university the rest of the week.
+          At work, we develop complex configurators, shops and other custom solutions for our customers. In my first year I almost only
+          worked on the frontend parts of our systems, implementing business logic for configurators in Angular using RxJS and NgRX.
+          Then I did more and more stuff on the backend, so that I could handle tasks more easily on my own as a fullstack engineer.
+          Personally, I want our customers to get the best product shipped, so I read a lot of blog posts and books in my freetime and try
+          to apply the newly gained knowledge in new projects and by refactoring old ones.
       - job: "Software Engineering Intern"
         company: "Web-Fabric GmbH Intern"
         companyUrl: "https://www.web-fabric.de/"
         date: "Oct 2019 - Aug 2021"
         content: | 
-          After a 2 week long internship, which he had to do in order to get our degree, I got a job offer from [Web-Fabric GmbH](https://www.web-fabric.de/).
-          I convinced them of the knowledge in program, which I gained by doing software-engineering as a hobby since I was ten.
-          In the first year I had a mentor on my side, supervising my rewrite of a Product in ASP.NET Core.
-          While in the second year, I got to develop implementations of an internal framework as sample-applications, so other developers on our team
+          After a 2 week long internship, which we had to do in order to get our degree, I got a job offer from [Web-Fabric GmbH](https://www.web-fabric.de/).
+          I convinced them of the knowledge in programming, which I gained by doing software-engineering as a hobby since I was ten years old.
+          In the first year I had a mentor on my side, supervising my rewrite of an existing API in ASP.NET Core.
+          While, in the second year, I got to develop implementations of an internal framework as sample-applications, so other developers on our team
           could understand and use the library more easily. 
 
   # Education
@@ -114,8 +114,8 @@ params:
         GPA: "AVG until now: 1.2 out of 5 (1-5 lower is better)"
         content: |-
           - Scientific Papers:
-            - Image Processing and Facial Recognition using Artificial Intelligence
-            - Product-Specification-Sheet for the implementation of a Smart-Mirror
+            - Image processing and facial recognition using artificial intelligence
+            - Product-specifications-heet for the implementation of a smart-mirror
       - title: "University Entrance Diploma"
         school:
           name: "Carl-Fuhlrott-Gymnasium, Wuppertal"
@@ -128,11 +128,11 @@ params:
             - Geography (Intensive Course)
             - Computer Science (Oral Basic Course)
             - English (Written Basic Course)
-          - In 10th grade I worked on a scientific paper on how to secure a modern Web-Application
-          - From 10th to 12th grade I regularly took part in an Astronomy course, where we worked with highly professional equipment to observe stars, nebulas and learn about our galaxy at the [Schülerlabor Astronomie](https://www.schuelerlabor-astronomie.de/)
+          - In 10th grade I worked on a scientific paper on how to secure a modern web-application
+          - From 10th to 12th grade I regularly took part in an astronomy course, where we worked with highly professional equipment to observe stars, nebulas and learn about our galaxy at the [Schülerlabor Astronomie](https://www.schuelerlabor-astronomie.de/)
           - I discovered a highly severe security vulnerability in our schools online system, revealing the passwords of students
-          - I developed a Web-Application for a school project about the European Union
-          - I volunteered as an event-technician for our school events, setting up Cameras, Lights and Audio for i.e. the Symphony-Orchestra Wuppertal
+          - I developed a web-application for a school project about the european union
+          - I volunteered as an event-technician for our school events, setting up cameras, lights and audio for i.e. the Symfonie-Orchester Wuppertal
 
   #Contact
   contact:
