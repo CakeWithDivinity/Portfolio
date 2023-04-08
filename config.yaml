@@ -20,7 +20,7 @@ Menus:
 
 params:
   title: "Hendrik Loewe"
-  description: My personal Portfolio and Blog
+  description: My personal portfolio and blog
 
   useBootstrapCDN: false
 
@@ -57,11 +57,13 @@ params:
   about:
     enable: true
     title: "About Me"
+    image: /images/portrait-with-cat.jpg
     content: |-
       I am a web-developer primarily working with Angular and Symfony. Right now I am studying computer-science at the FOM-Hochschule in Düsseldorf.
-      I enjoy reactive programming with RxJS and NgRX and am trying to do test-driven-development as far as I can.
+      I enjoy reactive programming with RxJS and NgRX and am trying to utilize test-driven-development as far as I can.
       At work, I develop highly complex configurators for our customers, which let users configure products to their individual needs.
       In my freetime I like to learn more about coding and try to improve myself towards writing clean, correct and performant code.
+      Right now this includes learning Rust and tools for easier testing in Angular
     skills:
       enable: true
       title: "Here are a few technologies I've worked with before:"
@@ -71,6 +73,7 @@ params:
         - "NgRX"
         - "Karma"
         - "Cypress"
+        - "Jest"
         - "Symfony"
         - "ApiPlatform"
         - "Git"
@@ -85,11 +88,12 @@ params:
         date: "Aug 2021 - present"
         content: |- 
           I am currently working as a software engineering trainee at [Web-Fabric GmbH](https://www.web-fabric.de/) in Wuppertal for 3 days a week, while I visit a university the rest of the week.
-          At work, we develop complex configurators, shops and other custom solutions for our customers. In my first year I almost only
-          worked on the frontend parts of our systems, implementing business logic for configurators in Angular using RxJS and NgRX.
-          Then I did more and more stuff on the backend, so that I could handle tasks more easily on my own as a fullstack engineer.
-          Personally, I want our customers to get the best product shipped, so I read a lot of blog posts and books in my freetime and try
-          to apply the newly gained knowledge in new projects and by refactoring old ones.
+          At work, we develop complex configurators, shops and other custom solutions for our customers.
+          My typical day at work contains the following activities:
+            - Implementing new features in the front- or backend using our Techstack (Angular, Symfony and Postgres)
+            - Reviewing Angular code of my coworkers and assissting them in writing performant and reactive code
+            - Maintaining an internal framework to handle rendering and change-processing of forms with several hundred fields and options
+            - Improving the Requirements-Engineering workflow at our company
       - job: "Software Engineering Intern"
         company: "Web-Fabric GmbH Intern"
         companyUrl: "https://www.web-fabric.de/"
@@ -111,11 +115,12 @@ params:
           name: "FOM University of Applied Sciences for Economics and Management"
           url: "https://www.fom.de/"
         date: "Sep 2021 - Mar 2025"
-        GPA: "AVG until now: 1.2 out of 5 (1-5 lower is better)"
+        GPA: "AVG until now: 1.2 out of 5 (1 to 5, lower is better)"
         content: |-
           - Scientific Papers:
             - Image processing and facial recognition using artificial intelligence
             - Product-specifications-heet for the implementation of a smart-mirror
+            - Advantages of a docker based infrastructure during the development and deployment of software 
       - title: "University Entrance Diploma"
         school:
           name: "Carl-Fuhlrott-Gymnasium, Wuppertal"
