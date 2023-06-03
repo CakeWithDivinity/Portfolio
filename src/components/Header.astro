@@ -1,0 +1,124 @@
+---
+---
+
+<style>
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "brand hamburger"
+      "nav nav";
+  }
+
+  @keyframes expand-nav {
+    from {
+      grid-template-rows: auto 0;
+    }
+    to {
+      grid-template-rows: auto 1fr;
+    }
+  }
+
+  .brand {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--primary);
+    grid-area: brand;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.25rem;
+    grid-area: hamburger;
+    justify-self: end;
+  }
+
+  .hamburger .line {
+    display: block;
+    width: 2rem;
+    height: 0.15rem;
+    background-color: var(--primary);
+  }
+
+  nav {
+    padding-bottom: 1rem;
+    grid-area: nav;
+    overflow-y: hidden;
+    position: relative;
+    max-height: 0rem;
+    transition: max-height 500ms ease;
+  }
+
+  nav.expanded {
+    max-height: 15rem;
+  }
+
+  nav::after {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-color);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 500ms ease;
+  }
+
+  nav.expanded::after {
+    transform: scaleX(1);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+</style>
+
+<header>
+  <a class="brand" href="/">Hendrik Loewe</a>
+
+  <div id="hamburger" class="hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/#Education">Education</a></li>
+      <li><a href="/#Contact">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script lang="ts">
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.querySelector("nav");
+  const header = document.querySelector("header");
+
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("expanded");
+    header.classList.toggle("with-expanded-nav");
+  });
+</script>
