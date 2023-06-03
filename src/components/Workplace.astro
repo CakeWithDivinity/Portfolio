@@ -1,0 +1,72 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  workplace: CollectionEntry<"workplaces">;
+}
+
+const { workplace } = Astro.props;
+
+const { Content } = await workplace.render();
+
+function formatDate(date: Date): string {
+  return `${date.getMonth() + 1}/${date.getFullYear()}`;
+}
+---
+
+<style>
+  h2 {
+    text-align: center;
+  }
+
+  .workplace {
+    width: 100%;
+    transition: transform 500ms ease;
+    padding-inline: 0.5rem;
+  }
+
+  .workplace a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .date-display {
+    display: flex;
+    gap: 1ch;
+  }
+
+  .inline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+</style>
+
+<style is:global>
+  .workplace-content p {
+    text-align: justify;
+    word-break: break-word;
+  }
+
+  .workplace-content ul {
+    padding-left: 2rem;
+  }
+</style>
+
+<div class="workplace">
+  <h2>{workplace.data.jobTitle}</h2>
+  <div class="inline">
+    <a href={workplace.data.companyUrl}>
+      {workplace.data.companyName}
+    </a>
+    <p class="date-display">
+      <span>{formatDate(workplace.data.from)}</span>-
+      <span>
+        {workplace.data.to ? formatDate(workplace.data.to) : "present"}
+      </span>
+    </p>
+  </div>
+  <div class="workplace-content">
+    <Content />
+  </div>
+</div>

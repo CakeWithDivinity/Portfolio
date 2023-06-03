@@ -1,0 +1,93 @@
+---
+import { getCollection } from "astro:content";
+import Workplace from "./Workplace.astro";
+
+const workplaces = await getCollection("workplaces").then((workplaces) => {
+  workplaces.sort((a, b) => (a.data.from < b.data.from ? 1 : -1));
+  return workplaces;
+});
+---
+
+<style>
+  section {
+    margin-top: 3rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .experiences {
+    background-color: #23283a;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .toggles {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .workplace-toggle {
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+  }
+
+  .workplace-toggle.active {
+    border-bottom: 1px solid var(--primary);
+  }
+
+  .content {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+  }
+</style>
+
+<section id="experience">
+  <h1>Experience</h1>
+
+  <div class="experiences">
+    <div class="toggles">
+      {
+        workplaces.map((workplace, i) => (
+          <p class:list={["workplace-toggle", { active: i === 0 }]}>
+            {workplace.data.jobTitle}
+          </p>
+        ))
+      }
+    </div>
+
+    <div class="content">
+      {
+        workplaces.map((workplace) => (
+          <Workplace workplace={workplace}/>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const toggles = document.querySelectorAll(".workplace-toggle");
+  const workplaces = document.querySelectorAll(
+    ".workplace"
+  ) as NodeListOf<HTMLElement>;
+
+  toggles.forEach((workplaceToggle, index) => {
+    workplaceToggle.addEventListener("click", () => {
+      toggles.forEach((toggle) => toggle.classList.remove("active"));
+      workplaceToggle.classList.add("active");
+
+      workplaces.forEach((workplace) => {
+        workplace.style.transform = `translateX(${index * -100}%)`;
+      });
+    });
+  });
+</script>
