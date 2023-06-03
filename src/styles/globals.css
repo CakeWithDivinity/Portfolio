@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --background-color: #1a1b26;
+  --text-color: #a3abd0;
+  --primary: #6280c3;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem;
+}
