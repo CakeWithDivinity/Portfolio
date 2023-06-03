@@ -1,0 +1,72 @@
+---
+const skills = ["angular", "rxjs", "ts", "git", "jest", "cypress"];
+---
+
+<style>
+  section {
+    margin-top: 3rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .skills li {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .skills li img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<section id="about">
+  <h1>About Me</h1>
+  <p>
+    I am primarily working with Angular and Symfony and currently studying
+    computer-science at the FOM-Hochschule in Düsseldorf.
+  </p>
+  <p>
+    At work I develop highly complex configurators for our customers, which let
+    users configure products to their individual needs.
+  </p>
+  <p>
+    In my freetime I like to learn more about coding and try to improve myself
+    towards writing clean, correct and performant code. Right now this includes
+    using Rust for learning language design and compilation. As well as
+    experimenting with tools for easier testing in Angular.
+  </p>
+  <p>
+    Here are the technologies, I would consider myself most comfortable with:
+  </p>
+  <ul class="skills">
+    {
+      skills.map((skill) => (
+        <li>
+          <img
+            src={`/images/logos/${skill}.webp`}
+            width="128"
+            height="128"
+            loading="lazy"
+            alt={skill}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</section>
