@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+
+const educationItems = await getCollection("education");
+
+function formatDate(date: Date): string {
+  return `${date.getMonth() + 1}/${date.getFullYear()}`;
+}
+---
+
+<style>
+  section {
+    margin-top: 3rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .education-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .education-item {
+    background-color: #23283a;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0px 10px 50px rgb(0 0 0 / 30%);
+  }
+
+  .education-item a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .education-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+  }
+</style>
+
+<style is:global>
+  .education-items ul {
+    padding-left: 2rem;
+  }
+</style>
+
+<section id="education">
+  <h1>Education</h1>
+
+  <div class="education-items">
+    {
+      educationItems.map(async (educationItem) => {
+        const { Content } = await educationItem.render();
+
+        return (
+          <div class="education-item">
+            <div class="education-head">
+              <h2>{educationItem.data.title}</h2>
+              <span>
+                {formatDate(educationItem.data.from)} -
+                {formatDate(educationItem.data.to)}
+              </span>
+            </div>
+            <a href={educationItem.data.instituteUrl}>
+              {educationItem.data.instituteName}
+            </a>
+            <div>
+              <Content />
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
