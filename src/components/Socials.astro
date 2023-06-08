@@ -1,0 +1,43 @@
+---
+const socials = [
+  {
+    icon: "github",
+    url: "https://github.com/CakeWithDivinity",
+  },
+  {
+    icon: "linkedIn",
+    url: "https://www.linkedin.com/in/hendrik-loewe-04ba2b202/",
+  },
+  {
+    icon: "mail",
+    url: "mailto:hendrikloewe3@gmail.com",
+  },
+];
+---
+
+<style>
+  .socials {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .socials img {
+    width: 2rem;
+    height: 2rem;
+  }
+</style>
+
+<ul class="socials">
+  {
+    socials.map((social) => (
+      <li>
+        <a href={social.url} target="_blank">
+          <img src={`/images/logos/${social.icon}.svg`} alt={social.icon} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
