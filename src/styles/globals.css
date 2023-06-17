@@ -19,7 +19,16 @@
   --text-color: #a3abd0;
   --primary: #6280c3;
   --secondary: #585d73;
+  --content-max-width: 1200px;
+  --content-padding: 1rem;
 }
+
+@media screen and (min-width: 1200px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
 
 html,
 body {
@@ -33,4 +42,12 @@ body {
   color: var(--text-color);
   padding: 1rem;
   font-family: 'Alata', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  max-width: var(--content-max-width);
+  padding-inline: var(--content-padding);
 }
