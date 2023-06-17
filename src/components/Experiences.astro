@@ -29,9 +29,10 @@ const workplaces = await getCollection("workplaces").then((workplaces) => {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--secondary);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 1.5ch;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
   }
 
   .workplace-toggle {
@@ -39,14 +40,27 @@ const workplaces = await getCollection("workplaces").then((workplaces) => {
     border-bottom: 1px solid transparent;
   }
 
-  .workplace-toggle.active {
-    border-bottom: 1px solid var(--primary);
+  .workplace-toggle::after {
+    content: " ";
+    display: block;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+    height: 2px;
+  }
+
+  .workplace-toggle:hover::after {
+    background-color: var(--secondary);
+    transform: scaleX(1);
+  }
+
+  .workplace-toggle.active::after {
+    background-color: var(--primary);
+    transform: scaleX(1);
   }
 
   .content {
     overflow-x: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 100%);
+    width: 100%;
   }
 </style>
 
@@ -65,11 +79,7 @@ const workplaces = await getCollection("workplaces").then((workplaces) => {
     </div>
 
     <div class="content">
-      {
-        workplaces.map((workplace) => (
-          <Workplace workplace={workplace}/>
-        ))
-      }
+      {workplaces.map((workplace) => <Workplace workplace={workplace} />)}
     </div>
   </div>
 </section>
@@ -80,13 +90,19 @@ const workplaces = await getCollection("workplaces").then((workplaces) => {
     ".workplace"
   ) as NodeListOf<HTMLElement>;
 
+  workplaces[0].classList.add("visible");
+
   toggles.forEach((workplaceToggle, index) => {
     workplaceToggle.addEventListener("click", () => {
       toggles.forEach((toggle) => toggle.classList.remove("active"));
       workplaceToggle.classList.add("active");
 
-      workplaces.forEach((workplace) => {
-        workplace.style.transform = `translateX(${index * -100}%)`;
+      workplaces.forEach((workplace, workplaceIndex) => {
+        if (workplaceIndex === index) {
+          workplace.classList.add("visible");
+        } else {
+          workplace.classList.remove("visible");
+        }
       });
     });
   });
