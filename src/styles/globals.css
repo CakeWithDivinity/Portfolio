@@ -51,3 +51,7 @@ section {
   max-width: var(--content-max-width);
   padding-inline: var(--content-padding);
 }
+
+section + section {
+  margin-top: 5rem;
+}
