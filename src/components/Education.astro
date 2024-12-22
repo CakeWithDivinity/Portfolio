@@ -4,7 +4,8 @@ import { getCollection } from "astro:content";
 const educationItems = await getCollection("education");
 
 function formatDate(date: Date): string {
-  return `${date.getMonth() + 1}/${date.getFullYear()}`;
+  const month = date.getMonth() + 1
+  return `${month.toString().padStart(2, "0")}/${date.getFullYear()}`;
 }
 ---
 

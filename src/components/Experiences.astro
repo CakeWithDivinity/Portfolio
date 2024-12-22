@@ -73,7 +73,7 @@ const workplaces = await getCollection("workplaces").then((workplaces) => {
       {
         workplaces.map((workplace, i) => (
           <p class:list={["workplace-toggle", { active: i === 0 }]}>
-            {workplace.data.jobTitle}
+            {workplace.data.companyName}
           </p>
         ))
       }
