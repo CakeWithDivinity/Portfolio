@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Socials from "./Socials.astro";
 ---
 
@@ -71,12 +72,13 @@ import Socials from "./Socials.astro";
     </p>
   </div>
 
-  <img
+  <Image
+    loading="eager"
     class="hero-image"
     src="/images/portrait.webp"
     width="523"
     height="929"
-    alt="An image of myself during vacation in New York"
+    alt="Myself during vacation in New York"
   />
 
   <div class="socials">
