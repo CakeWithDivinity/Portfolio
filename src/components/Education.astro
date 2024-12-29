@@ -2,9 +2,12 @@
 import { getCollection } from "astro:content";
 
 const educationItems = await getCollection("education");
+const sortedEducationItems = educationItems.sort((a, b) => {
+  return b.data.to.valueOf() - a.data.to.valueOf();
+});
 
 function formatDate(date: Date): string {
-  const month = date.getMonth() + 1
+  const month = date.getMonth() + 1;
   return `${month.toString().padStart(2, "0")}/${date.getFullYear()}`;
 }
 ---
@@ -57,7 +60,7 @@ function formatDate(date: Date): string {
 
   <div class="education-items">
     {
-      educationItems.map(async (educationItem) => {
+      sortedEducationItems.map(async (educationItem) => {
         const { Content } = await educationItem.render();
 
         return (
